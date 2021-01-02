@@ -30,4 +30,14 @@ concat(str1,str2,...)
 ```sql
 select concat(last_name, ' ', first_name) as Name from employees
 ```
+
+### 2.常用聚合函数
+sum():求和，count():计算总行数，max()\min():最大\最小值，avg():求平均值，round():保留几位小数
+
+### 3.update语句
+以下代码为从牛客网复制的最基本update语句用法：
+```sql
+update titles_test set to_date=NULL, from_date='2001-01-01' where to_date='9999-01-01'
+```
+
 java面试题整理
