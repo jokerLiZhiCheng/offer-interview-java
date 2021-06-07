@@ -20,5 +20,19 @@
     同mysql：读未提交、读已提交、可重复读、串行化
 
 ### spring事务的传播行为
-    
+    propagation_required:当前存在事务，则加入该事务，不存在则创建    
+    propagation_required_new:新建一个独立的事务，互不影响
+    propagation_nested:和new类似
+    propagation_supports:仅支持当前事务，若当前不存在事务，则以非事务方式执行
+    propagation_not_supported:以非事务方式执行，当前存在事务就挂起
+    propagation_mandatory:强制以事务方式执行，若不存在事务则抛出异常
+    propagation_never：强制以非事务方式执行，若存在事务则抛出异常
+
 spring事务传播机制和隔离级别 [https://blog.csdn.net/qq_17085835/article/details/84837253]()
+
+### spring中bean作用域
+    singleton:容器仅存在一个bean实例
+    prototype：每次调用getBean都会创建新的实例
+    request：每次http请求创建新的bean
+    session：同一个http session共享一个bean
+    globalSession：作用域Portlet应用环境
