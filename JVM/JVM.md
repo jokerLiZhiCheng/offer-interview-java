@@ -59,3 +59,16 @@
     
 ### 简述线程池
     
+### 线程池参数
+    1.corePoolSize:常驻核心线程数，超过该值后如果线程空闲会被销毁
+    2.maximumPoolSize:线程池能够容纳的同时执行的线程最大数
+    3.keepAliveTime:线程空闲时间，线程空闲时间达到该值后会被销毁，直到只剩下corePoolSize个线程为止
+    4.workQueue：工作队列
+    5.threadFactory：线程工厂，用来生产一组相同任务的线程
+    6.handler：拒绝策略，有以下几种：
+                AbortPolicy：丢弃任务，并抛出异常
+                CallerRunsPolicy:重新尝试提交该任务
+                DiscardOldestPolicy:抛弃队列里等待最久的任务，并将当前任务加如队列
+                DiscardPolicy:直接抛弃任务，但不抛出异常
+                
+### 
