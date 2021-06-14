@@ -36,3 +36,24 @@ spring事务传播机制和隔离级别 [https://blog.csdn.net/qq_17085835/artic
     request：每次http请求创建新的bean
     session：同一个http session共享一个bean
     globalSession：作用域Portlet应用环境
+
+
+# 基础
+
+## http
+
+### 用户输入一个网址的请求过程
+    1.用户输入域名
+    2.DNS解析域名得到ip地址
+    3.客户端与服务器建立连接（TCP三次握手）
+    4.客户端发起http请求
+    5.服务器接收请求，根据端口号、路径找到对应资源文件，返回源代码给客户端
+    6.客户端拿到数据（html页面源代码），开始解析页面以及请求资源
+    7.客户端渲染页面
+    8.服务器断开连接（四次挥手）
+
+一次完整的http请求过程[https://blog.csdn.net/u013777975/article/details/80496121?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.control]()
+    
+### http无状态
+    指的是：http本身是一个无状态的连接协议，即同一个接口不同人调用返回的结果是相同的，但我们是有需要记录用户的状态信息需求的
+    因此Cookie、Session诞生了。
