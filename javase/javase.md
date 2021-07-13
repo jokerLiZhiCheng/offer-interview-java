@@ -9,3 +9,18 @@
 
 ### java和c的跨语言通信方案
     JNI
+    
+## java容器
+
+### 容器介绍
+
+| 接口 | 容器 | 实现 |
+| ---- | ---- | ---- |
+| Collection | List | ArrayList |
+|  |  | LinkedList |
+| | Set | HashSet |
+|  |  | TreeSet |
+| Map | Map | HashMap |
+| Map | Map | LinkedHashMap |
+
+    

@@ -36,6 +36,11 @@ spring事务传播机制和隔离级别 [https://blog.csdn.net/qq_17085835/artic
     request：每次http请求创建新的bean
     session：同一个http session共享一个bean
     globalSession：作用域Portlet应用环境
+    
+### 在一个service里，无事务的方法a()调用了有事务的方法b(),若调用方法a是否会开启事务？
+    不会，因为在调用注解方法时，spring会扫描该bean的调用方法上是否存在@transactional注解，若存在则为该bean创建代理子类，
+    注解也是在该代理类上启动，但若该方法的调用是被同类其他方法调用，则该方法的调用并没有通过代理类，而是直接使用bean对象，
+    也就不会开启事务。
 
 
 # 基础
